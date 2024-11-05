@@ -69,7 +69,7 @@ function App() {
       isImageGenerationEnabled: true,
       editorTheme: EditorTheme.COBALT,
       generatedCodeConfig: Stack.HTML_TAILWIND,
-      codeGenerationModel: CodeGenerationModel.CLAUDE_3_5_SONNET_2024_06_20,
+      codeGenerationModel: CodeGenerationModel.CLAUDE_3_5_SONNET_2024_10_22,
       // Only relevant for hosted version
       isTermOfServiceAccepted: false,
     },
@@ -85,11 +85,13 @@ function App() {
   const showBetterModelMessage =
     model !== CodeGenerationModel.GPT_4O_2024_05_13 &&
     model !== CodeGenerationModel.CLAUDE_3_5_SONNET_2024_06_20 &&
+    model !== CodeGenerationModel.CLAUDE_3_5_SONNET_2024_10_22 &&
     appState === AppState.INITIAL;
 
   const showSelectAndEditFeature =
     (model === CodeGenerationModel.GPT_4O_2024_05_13 ||
-      model === CodeGenerationModel.CLAUDE_3_5_SONNET_2024_06_20) &&
+      model === CodeGenerationModel.CLAUDE_3_5_SONNET_2024_06_20 ||
+      model === CodeGenerationModel.CLAUDE_3_5_SONNET_2024_10_22) &&
     (settings.generatedCodeConfig === Stack.HTML_TAILWIND ||
       settings.generatedCodeConfig === Stack.HTML_CSS);
 
