@@ -47,7 +47,7 @@ def auto_upgrade_model(code_generation_model: Llm) -> Llm:
         print(
             f"Initial deprecated model: {code_generation_model}. Auto-updating code generation model to CLAUDE-3.5-SONNET-2024-06-20"
         )
-        return Llm.CLAUDE_3_5_SONNET_2024_06_20
+        return Llm.CLAUDE_3_5_SONNET_2024_10_22
     return code_generation_model
 
 
